@@ -3,6 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<properties resource="config/db.properties"/>
 	<settings>
 		<setting name="jdbcTypeForNull" value="NULL"/>
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
@@ -13,16 +14,16 @@
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver"
-					value="oracle.jdbc.driver.OracleDriver" />
+					value="${driver}" />
 				<property name="url"
-					value="jdbc:oracle:thin:@localhost:1521:xe" />
-				<property name="username" value="csh" />
-				<property name="password" value="csh" />
+					value="${url}" />
+				<property name="username" value="${user}" />
+				<property name="password" value="${password}" />
 			</dataSource>
 		</environment>
 	</environments>
 	
 	<mappers>
-		<mapper resource="co/edu/prj/book/mapper/BookMapper.xml" />
+		<package name="co.edu.prj"/>
 	</mappers>
 </configuration>
