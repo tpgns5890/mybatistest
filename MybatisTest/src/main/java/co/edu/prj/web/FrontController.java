@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.edu.prj.book.command.AjaxBookList;
+import co.edu.prj.book.command.AjaxMainForm;
 import co.edu.prj.book.command.BookList;
 import co.edu.prj.common.Command;
 import co.edu.prj.main.MainCommand;
@@ -43,6 +45,10 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoinForm.do", new MemberJoinForm()); //회원가입
 		map.put("/ajaxIdCheck.do", new AjaxIdCheck()); //ajax를 이용한 아이디 중복체크
 		map.put("/memberJoin.do", new MemberJoin()); //회원가입
+		
+		//jquery
+		map.put("/ajaxjquery.do", new AjaxMainForm());
+		map.put("/ajaxBookList.do", new AjaxBookList());
 
 	}
 

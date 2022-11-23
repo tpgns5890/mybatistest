@@ -12,7 +12,7 @@
 	<nav id="topMenu">
 		<ul>
 			<li><a class="menuLink" href="main.do">Home</a></li>	
-			<li><a class="menuLink" href="bookList.do">book</a></li>		
+			<li><a class="menuLink" href="ajaxjquery.do">book</a></li>		
 			<li><a class="menuLink" href="#">Content</a></li>
 			<c:if test="${responsibility eq 'admin' }">
 				<li><a class="menuLink" href="#">Member</a></li>
